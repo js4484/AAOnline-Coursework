@@ -1,0 +1,23 @@
+<h1><%=@kitty.name%></h1>
+
+
+<table>
+    <tr>
+        <th colspan="5">This is your cat</th>
+    </tr>
+    <tr>
+        <th>name</th>
+        <th>birthdate</th>
+        <th>color</th>
+        <th>sex</th>
+        <th>description</th>
+    </tr>
+    <tr>
+        <td><%= @kitty.name %></td>
+        <td><%= @kitty.birth_date %></td>
+        <td><%= @kitty.color %></td>
+        <td><%= @kitty.sex %></td>
+        <td><%= @kitty.description %></td>
+    </tr>
+</table>
+

@@ -1,0 +1,9 @@
+<h1> Cats Index!! </h1>
+
+<ul>
+    <% @kitty.each do |kit|%>
+        <li>
+        <%= kit.name %> : <a href=<%=cat_url(kit.id)%>>More Info</a>
+        </li>
+    <%end%>
+</ul>

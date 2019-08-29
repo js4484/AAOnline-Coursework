@@ -1,0 +1,45 @@
+<h1>Pretend to own a sweet baby kitten</h1>
+
+<form action="<%= cats_url %>" method="POST">
+    <ul>
+    <% @kitty.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+    <% end%>
+    </ul>
+
+<br> 
+    <label> Sweet Baby Kitten's Sweet Baby Name
+        <input type="text" name="kitty[name]" value="<%= @kitty.name %>"/>
+    </label>
+<br> 
+   
+    <label> Khöleür
+        <select> 
+            <option value = 'blank' selected="true">----------</option>
+            <option value="Red">Red</option>
+            <option value="Blue">Blue</option>
+            <option value="Fuscia">Fuscia</option>
+            <option value="Lime green">Lime Green</option>
+            <option value="Hunter green">Hunter Green</option>
+            <option value="Calico">Calico</option>
+            <option value="Umber">Umber</option>
+        </select>
+    </label>
+<br> 
+    <label>when did was this cat borned
+        <input type="date">
+    </label>
+
+<br> 
+    <label> Limited gender binary options; choose one!
+        <input type="radio" name="kitty[sex" value="M"> M
+        <input type="radio" name="kitty[sex" value="F"> F<br>
+    </label>
+
+    <label> Describe the cat!
+        <textarea placeholder="what is the cat even liiiiike, tho?" ></textarea>
+    </label>
+    
+
+
+</form>
