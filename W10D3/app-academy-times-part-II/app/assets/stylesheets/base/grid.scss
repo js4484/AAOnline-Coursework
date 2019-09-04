@@ -1,0 +1,49 @@
+// .col {
+//   // ...
+// }
+
+/* Attribute selector targeting all elements
+with a class attribute containing 'col-' */
+// [class*='col-'] {
+//   // ...
+// }
+
+.col-1-3 {
+  width: 33.333333333333333333%;
+}
+
+.col-2-3 {
+  width: 66.66666666666666667%;
+}
+
+
+
+// [class*='col-']:last-of-type {
+//   // ...
+// }
+
+.part-1 {
+  width: 66.6666666666666666667%;
+  display: flex;
+}
+
+.section-main {
+  display: flex;
+}
+
+.op-cols {
+  display: flex;
+}
+
+.opinion {
+  width: 33.33333333333333333%;
+}
+
+
+
+
+// @media all and (max-width: 1000px) {
+//   [class*='col-'] {
+//     // width:
+//   }
+// }
