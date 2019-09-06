@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ReadIt</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  
+    <%  if signed_in? %>
+      <form action="<%= session_url %>" method="POST">
+        <input type="hidden" name="_method" value="DELETE">  
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+        <button>Bieeeeeeeee</button>
+      </form>
+      <p><a href="<%=subs_url%>">Sub Index</a></p>
+    <% else %>
+    <% unless params["action"] == "new" && params["controller"] =="sessions"%>
+    <button><a href="<%= new_session_url %>">Citizen, present your identification!</a></button>
+    <% end %>
+    <% end %>
+    <%= yield %>
+  </body>
+</html>

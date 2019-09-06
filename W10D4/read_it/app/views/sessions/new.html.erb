@@ -1,0 +1,16 @@
+<%=flash[:success]%>
+    <a href="<%= new_user_url %>">Join Us!!</a>
+
+    <h1>If you want to reap the benefits, you must abide by the social contact; prove yourself below:</h1>
+
+    <%=flash[:error]%>
+    <form action="<%=session_url%>" method="POST">
+        <input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    <label>Username:
+        <input type="text" name="user[username]" >
+    </label>
+    <label>Password:
+        <input type="password" name="user[password]" >
+    </label>
+    <button>Am I worthy...?</button>
+</form

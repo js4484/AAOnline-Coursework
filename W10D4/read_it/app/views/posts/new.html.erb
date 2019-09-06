@@ -1,0 +1,29 @@
+<h1>Remember, be specific, concise, and inspirational!!!!</h1>
+
+<form action="<%= posts_url%>" method="POST">
+<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+    
+    <label>Title:
+        <input type="text" name="post[title]" >
+    </label>
+    
+    <h4>Where do you want to send this sucker?</h4>
+    <% Sub.all.each do |ele| %>
+        <label> <%= ele.title %>
+        <input type="checkbox" name="post[sub_id][]" value="<%= ele.id %>">
+        
+        
+        </label>
+    <% end %>
+    <br>
+    <label>URL:
+        <input type="text" name="post[url]" >
+    </label>
+    <br>
+    <label>Content:
+        <textarea name="post[content]" cols="30" rows="10"></textarea>
+    </label>
+
+<button>Spead the word(s)</button>
+</form>
+
